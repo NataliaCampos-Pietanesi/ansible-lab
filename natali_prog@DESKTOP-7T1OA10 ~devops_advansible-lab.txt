@@ -1,0 +1,255 @@
+natali_prog@DESKTOP-7T1OA10:~$ cd devops_adv
+natali_prog@DESKTOP-7T1OA10:~/devops_adv$ git clone git@github.com:NataliaCampos-Pietanesi/ansible-lab-local.git
+Cloning into 'ansible-lab-local'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+natali_prog@DESKTOP-7T1OA10:~/devops_adv$ cd ansible-lab-local
+natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab-local$ devops_adv
+devops_adv: command not found
+natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab-local$ cd ..
+natali_prog@DESKTOP-7T1OA10:~/devops_adv$ git clone git@github.com:NataliaCampos-Pietanesi/ansible-lab.git
+Cloning into 'ansible-lab'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+natali_prog@DESKTOP-7T1OA10:~/devops_adv$ cd ansible-lab
+natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ python3 -m venv env
+natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ source env/bin/activate
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ pip install ansible
+ansible --version
+Collecting ansible
+  Using cached ansible-12.2.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting ansible-core~=2.19.4 (from ansible)
+  Using cached ansible_core-2.19.4-py3-none-any.whl.metadata (7.7 kB)
+Collecting jinja2>=3.1.0 (from ansible-core~=2.19.4->ansible)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting PyYAML>=5.1 (from ansible-core~=2.19.4->ansible)
+  Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting cryptography (from ansible-core~=2.19.4->ansible)
+  Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting packaging (from ansible-core~=2.19.4->ansible)
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting resolvelib<2.0.0,>=0.5.3 (from ansible-core~=2.19.4->ansible)
+  Using cached resolvelib-1.2.1-py3-none-any.whl.metadata (3.7 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.1.0->ansible-core~=2.19.4->ansible)
+  Using cached markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting cffi>=2.0.0 (from cryptography->ansible-core~=2.19.4->ansible)
+  Using cached cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->ansible-core~=2.19.4->ansible)
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Using cached ansible-12.2.0-py3-none-any.whl (53.6 MB)
+Using cached ansible_core-2.19.4-py3-none-any.whl (2.4 MB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+Using cached resolvelib-1.2.1-py3-none-any.whl (18 kB)
+Using cached cryptography-46.0.3-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+Using cached markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Installing collected packages: resolvelib, PyYAML, pycparser, packaging, MarkupSafe, jinja2, cffi, cryptography, ansible-core, ansible
+Successfully installed MarkupSafe-3.0.3 PyYAML-6.0.3 ansible-12.2.0 ansible-core-2.19.4 cffi-2.0.0 cryptography-46.0.3 jinja2-3.1.6 packaging-25.0 pycparser-2.23 resolvelib-1.2.1
+ansible [core 2.19.4]
+  config file = None
+  configured module search path = ['/home/natali_prog/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/natali_prog/devops_adv/ansible-lab/env/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/natali_prog/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/natali_prog/devops_adv/ansible-lab/env/bin/ansible
+  python version = 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0] (/home/natali_prog/devops_adv/ansible-lab/env/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible version
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+[WARNING]: Could not match supplied host pattern, ignoring: version
+[ERROR]: No argument passed to command module
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible --versio
+n
+ansible [core 2.19.4]
+  config file = None
+  configured module search path = ['/home/natali_prog/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/natali_prog/devops_adv/ansible-lab/env/lib/python3.12/site-packages/ansible
+  ansible collection location = /home/natali_prog/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/natali_prog/devops_adv/ansible-lab/env/bin/ansible
+  python version = 3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0] (/home/natali_prog/devops_adv/ansible-lab/env/bin/python3)
+  jinja version = 3.1.6
+  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ code .
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible all -i inventory.ini -m ping
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible-playbook -i inventory.ini site.yml
+
+PLAY [Configurar entorno local] ************************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [Mostrar información del sistema] *****************************************
+changed: [localhost]
+
+TASK [Imprimir información del sistema] ****************************************
+ok: [localhost] => {
+    "msg": "Sistema: Linux DESKTOP-7T1OA10 6.6.87.2-microsoft-standard-WSL2#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux"
+}
+
+TASK [Crear directorio de trabajo] *********************************************
+changed: [localhost]
+
+TASK [Crear archivo de bienvenida] *********************************************
+changed: [localhost]
+
+TASK [Mostrar contenido del archivo] *******************************************
+changed: [localhost]
+
+TASK [Imprimir contenido del archivo] ******************************************
+ok: [localhost] => {
+    "msg": [
+        "¡Hola desde Ansible!",
+        "Fecha de creación: 2025-11-13"
+    ]
+}
+
+TASK [Listar archivos en el directorio] ****************************************
+changed: [localhost]
+
+TASK [Mostrar archivos creados] ************************************************
+ok: [localhost] => {
+    "msg": [
+        "total 12",
+        "drwxr-xr-x  2 natali_prog natali_prog 4096 Nov 13 17:42 .",
+        "drwxr-x--- 14 natali_prog natali_prog 4096 Nov 13 17:42 ..",
+        "-rw-r--r--  1 natali_prog natali_prog   53 Nov 13 17:42 welcome.txt"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=9    changed=5    unreachable=0    failed=0   skipped=0    rescued=0    ignored=0
+
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ls -la ~/ansible-test/
+total 12
+drwxr-xr-x  2 natali_prog natali_prog 4096 Nov 13 17:42 .
+drwxr-x--- 14 natali_prog natali_prog 4096 Nov 13 17:42 ..
+-rw-r--r--  1 natali_prog natali_prog   53 Nov 13 17:42 welcome.txt
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ cat ~/ansible-test/welcome.txt
+¡Hola desde Ansible!
+Fecha de creación: 2025-11-13
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible all -i inventory.ini -m ping
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ansible-playbook -i inventory.ini site.yml
+
+PLAY [Configurar entorno local] ************************************************
+
+TASK [Gathering Facts] *********************************************************
+[WARNING]: Host 'localhost' is using the discovered Python interpreter at '/home/natali_prog/devops_adv/ansible-lab/env/bin/python3.12', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+ok: [localhost]
+
+TASK [Mostrar información del sistema] *****************************************
+changed: [localhost]
+
+TASK [Imprimir información del sistema] ****************************************
+ok: [localhost] => {
+    "msg": "Sistema: Linux DESKTOP-7T1OA10 6.6.87.2-microsoft-standard-WSL2#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux"
+}
+
+TASK [Crear directorio de trabajo] *********************************************
+ok: [localhost]
+
+TASK [Crear archivo de bienvenida] *********************************************
+ok: [localhost]
+
+TASK [Mostrar contenido del archivo] *******************************************
+changed: [localhost]
+
+TASK [Imprimir contenido del archivo] ******************************************
+ok: [localhost] => {
+    "msg": [
+        "¡Hola desde Ansible!",
+        "Fecha de creación: 2025-11-13"
+    ]
+}
+
+TASK [Listar archivos en el directorio] ****************************************
+changed: [localhost]
+
+TASK [Mostrar archivos creados] ************************************************
+ok: [localhost] => {
+    "msg": [
+        "total 12",
+        "drwxr-xr-x  2 natali_prog natali_prog 4096 Nov 13 17:42 .",
+        "drwxr-x--- 14 natali_prog natali_prog 4096 Nov 13 17:42 ..",
+        "-rw-r--r--  1 natali_prog natali_prog   53 Nov 13 17:42 welcome.txt"
+    ]
+}
+
+TASK [Ejecutar comando echo] ***************************************************
+changed: [localhost]
+
+TASK [Mostrar resultado del echo] **********************************************
+ok: [localhost] => {
+    "echo_result.stdout": "Ansible está funcionando correctamente"
+}
+
+TASK [Crear múltiples archivos] ************************************************
+changed: [localhost] => (item=1)
+changed: [localhost] => (item=2)
+changed: [localhost] => (item=3)
+
+TASK [Mostrar fecha actual] ****************************************************
+changed: [localhost]
+
+TASK [Imprimir fecha] **********************************************************
+ok: [localhost] => {
+    "msg": "Fecha actual: Thu Nov 13 17:44:31 CET 2025"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=14   changed=6    unreachable=0    failed=0   skipped=0    rescued=0    ignored=0
+
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ ls -la ~/ansible-test/
+total 12
+drwxr-xr-x  2 natali_prog natali_prog 4096 Nov 13 17:44 .
+drwxr-x--- 14 natali_prog natali_prog 4096 Nov 13 17:42 ..
+-rw-r--r--  1 natali_prog natali_prog    0 Nov 13 17:44 file1.txt
+-rw-r--r--  1 natali_prog natali_prog    0 Nov 13 17:44 file2.txt
+-rw-r--r--  1 natali_prog natali_prog    0 Nov 13 17:44 file3.txt
+-rw-r--r--  1 natali_prog natali_prog   53 Nov 13 17:42 welcome.txt
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ cat ~/ansible-test/welcome.txt
+¡Hola desde Ansible!
+Fecha de creación: 2025-11-13
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ git add .
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ git commit -m "First commit ansible is working"
+[main 4638989] First commit ansible is working
+ 3 files changed, 80 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 inventory.ini
+ create mode 100644 site.yml
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ git push originmain
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.13 KiB | 1.13 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:NataliaCampos-Pietanesi/ansible-lab.git
+   5cde073..4638989  main -> main
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$ rm -rf ~/ansible-test
+(env) natali_prog@DESKTOP-7T1OA10:~/devops_adv/ansible-lab$
