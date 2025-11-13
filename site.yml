@@ -1,0 +1,63 @@
+---
+- name: Configurar entorno local
+  hosts: local
+  tasks:
+    - name: Mostrar información del sistema
+      command: uname -a
+      register: system_info
+
+    - name: Imprimir información del sistema
+      debug:
+        msg: "Sistema: {{ system_info.stdout }}"
+
+    - name: Crear directorio de trabajo
+      file:
+        path: "{{ ansible_env.HOME }}/ansible-test"
+        state: directory
+
+    - name: Crear archivo de bienvenida
+      copy:
+        content: |
+          ¡Hola desde Ansible!
+          Fecha de creación: {{ ansible_date_time.date }}
+        dest: "{{ ansible_env.HOME }}/ansible-test/welcome.txt"
+
+    - name: Mostrar contenido del archivo
+      command: cat "{{ ansible_env.HOME }}/ansible-test/welcome.txt"
+      register: file_content
+
+    - name: Imprimir contenido del archivo
+      debug:
+        msg: "{{ file_content.stdout_lines }}"
+
+    - name: Listar archivos en el directorio
+      command: ls -la "{{ ansible_env.HOME }}/ansible-test"
+      register: directory_listing
+
+    - name: Mostrar archivos creados
+      debug:
+        msg: "{{ directory_listing.stdout_lines }}"
+    - name: Ejecutar comando echo
+      command: echo "Ansible está funcionando correctamente"
+      register: echo_result
+
+    - name: Mostrar resultado del echo
+      debug:
+        var: echo_result.stdout
+
+    - name: Crear múltiples archivos
+      file:
+        path: "{{ ansible_env.HOME }}/ansible-test/file{{ item }}.txt"
+        state: touch
+      loop:
+        - 1
+        - 2
+        - 3
+
+    - name: Mostrar fecha actual
+      command: date
+      register: current_date
+
+    - name: Imprimir fecha
+      debug:
+        msg: "Fecha actual: {{ current_date.stdout }}"
