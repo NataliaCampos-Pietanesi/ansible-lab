@@ -1,2 +1,2 @@
-# ansible-lab-local
+# ansible-lab
 Ansible lab in local
